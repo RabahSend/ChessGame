@@ -1,8 +1,14 @@
 #include "piece.hpp"
+#include "king.hpp"
+#include "chessGame.hpp"
 
 int main() {
+    Piece::texture.loadFromFile("image/texture.png");
+
+    King whiteKing(1, 390.f, 700.f);
+    King blackKing(0, 290.f, 0);
     sf::RenderWindow window(sf::VideoMode(800, 800), "Chess");
-    Piece piece(0, 500);
+
 
     // run the program as long as the window is open
     while (window.isOpen()) {
@@ -28,7 +34,8 @@ int main() {
         }
     }
     
-    window.draw(piece.getSprite());
+    window.draw(whiteKing.getSprite());
+    window.draw(blackKing.getSprite());
 
         while (window.pollEvent(event))
         {

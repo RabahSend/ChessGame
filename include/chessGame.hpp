@@ -7,7 +7,7 @@
 
 typedef unsigned uint;
 
-std::map<std::string, uint> type = { 
+static std::map<std::string, uint> type = { 
                                     {"None", 0},
                                     {"Pawn", 1},
                                     {"Bishop", 100}, 
@@ -16,7 +16,5 @@ std::map<std::string, uint> type = {
                                     {"Queen", 400},
                                     {"King", 500}
                                 };
-
-sf::Texture texture;
 
 #endif
